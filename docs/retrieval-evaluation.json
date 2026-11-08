@@ -1,0 +1,132 @@
+{
+  "cases": 12,
+  "hit_rate_at_1": 1.0,
+  "recall_at_3": 1.0,
+  "scope": "Synthetic lexical retrieval cases only; not LLM answer accuracy.",
+  "results": [
+    {
+      "query": "Return an unused product within 30 days",
+      "expected": "KB-001",
+      "retrieved": [
+        "KB-001",
+        "KB-002"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "When will my return refund reach my original payment method",
+      "expected": "KB-001",
+      "retrieved": [
+        "KB-001",
+        "KB-003",
+        "KB-004"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "Delayed shipping tracking has not updated",
+      "expected": "KB-002",
+      "retrieved": [
+        "KB-002",
+        "KB-007",
+        "KB-003"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "Standard shipping delivery time",
+      "expected": "KB-002",
+      "retrieved": [
+        "KB-002",
+        "KB-007",
+        "KB-001"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "Product arrived damaged I need a replacement",
+      "expected": "KB-003",
+      "retrieved": [
+        "KB-003"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "My account was compromised after an unauthorized login",
+      "expected": "KB-004",
+      "retrieved": [
+        "KB-004",
+        "KB-001"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "How do I reset my password and enable two-factor authentication",
+      "expected": "KB-004",
+      "retrieved": [
+        "KB-004"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "Duplicate payment charges on my order",
+      "expected": "KB-005",
+      "retrieved": [
+        "KB-005",
+        "KB-001",
+        "KB-004"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "Payment authorization hold on billing statement",
+      "expected": "KB-005",
+      "retrieved": [
+        "KB-005",
+        "KB-001",
+        "KB-004"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "Cancel my order before dispatch",
+      "expected": "KB-006",
+      "retrieved": [
+        "KB-006",
+        "KB-007",
+        "KB-003"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "Change my delivery address before dispatch",
+      "expected": "KB-007",
+      "retrieved": [
+        "KB-007",
+        "KB-002",
+        "KB-006"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    },
+    {
+      "query": "Discount code error during checkout",
+      "expected": "KB-008",
+      "retrieved": [
+        "KB-008"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true
+    }
+  ]
+}

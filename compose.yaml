@@ -1,0 +1,22 @@
+services:
+  api:
+    build: .
+    ports: ["127.0.0.1:8020:8020"]
+    volumes: ["support-data:/data"]
+    environment: &settings
+      SUPPORTPILOT_DATA: /data
+      PORTAL_ORIGIN: http://localhost:8020
+      LLM_ENABLED: ${LLM_ENABLED:-0}
+      LLM_BASE_URL: ${LLM_BASE_URL:-http://host.docker.internal:8085/v1}
+      LLM_MODEL: qwen2.5-0.5b-instruct
+    mem_limit: 512m
+    cpus: 1
+  worker:
+    build: .
+    command: ["python","-m","app.worker"]
+    volumes: ["support-data:/data"]
+    environment: *settings
+    mem_limit: 512m
+    cpus: 1
+volumes:
+  support-data:
